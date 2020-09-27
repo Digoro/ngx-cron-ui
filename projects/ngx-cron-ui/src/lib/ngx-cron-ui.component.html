@@ -1,0 +1,31 @@
+<div [formGroup]="formGroup" style="display: flex;">
+  <!-- frequency -->
+  <select class="form-control" [formControlName]="'baseFrequency'">
+    <option *ngFor="let item of dataService.frequencyList" [value]="item.value">{{item.label}}</option>
+  </select>
+  <!-- months -->
+  <select *ngIf="selectedFrequency === 6" class="form-control" [formControlName]="'months'" multiple>
+    <option *ngFor="let item of dataService.months" [value]="item.value">{{item.label}}</option>
+  </select>
+  <label *ngIf="selectedFrequency === 6">월</label>
+  <!-- daysOfMonth -->
+  <select *ngIf="selectedFrequency >= 5" class="form-control" [formControlName]="'daysOfMonth'" multiple>
+    <option *ngFor="let item of dataService.daysOfMonth" [value]="item.value">{{item.label}}</option>
+  </select>
+  <label *ngIf="selectedFrequency >= 5">일</label>
+  <!-- daysOfWeek -->
+  <select *ngIf="selectedFrequency === 4" class="form-control" [formControlName]="'daysOfWeek'" multiple>
+    <option *ngFor="let item of dataService.daysOfWeek" [value]="item.value">{{item.label}}</option>
+  </select>
+  <label *ngIf="selectedFrequency === 4">요일</label>
+  <!-- hours -->
+  <select *ngIf="selectedFrequency >= 3" class="form-control" [formControlName]="'hours'" multiple>
+    <option *ngFor="let item of dataService.hours" [value]="item.value">{{item.label}}</option>
+  </select>
+  <label *ngIf="selectedFrequency >= 3">시</label>
+  <!-- minutes -->
+  <select *ngIf="selectedFrequency >= 2" class="form-control" [formControlName]="'minutes'" multiple>
+    <option *ngFor="let item of dataService.minutes" [value]="item.value">{{item.label}}</option>
+  </select>
+  <label *ngIf="selectedFrequency >= 2">분 마다</label>
+</div>
