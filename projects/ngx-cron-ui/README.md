@@ -7,7 +7,7 @@ cron 문법을 사용하여 스케줄을 입력할 수 있는 Angular 모듈
 
 -----
 <p align=center>
-<img  width="300" src="../../images/example01.png" />
+<img  width="300" src="images/example01.png" />
 </p>
 
 

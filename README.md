@@ -1,27 +1,30 @@
-# NgxCronUiProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+  <a href="https://www.npmjs.com/package/ngx-cron-ui" target="_blank"><img src="https://img.shields.io/npm/v/ngx-cron-ui.svg?style=flat-square&color=007acc&label=version&logo=NPM" alt="version" /></a> <a href="https://github.com/Digoro/ngx-cron-ui/blob/master/projects/ngx-cron-ui/README.md" target="_blank"><img alt="Angular" src="https://img.shields.io/static/v1.svg?label=&message=Angular&style=flat-square&logo=Angular&color=dd0031"></a>
 
-## Development server
+<h3 align=center>
+cron 문법을 사용하여 스케줄을 입력할 수 있는 Angular 모듈
+</h3>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-----
+<p align=center>
+<img  width="300" src="projects/ngx-cron-ui/images/example01.png" />
+</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Install
+### npm
+```bash
+$ npm install --save ngx-cron-ui
+```
 
-## Build
+## Get started
+```ts
+import { NgxCronUiModule } from 'ngx-cron-ui';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  imports: [
+    NgxCronUiModule
+  ]
+})
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
