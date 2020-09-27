@@ -1,24 +1,30 @@
-# NgxCronUi
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+  <a href="https://www.npmjs.com/package/ngx-cron-ui" target="_blank"><img src="https://img.shields.io/npm/v/ngx-cron-ui.svg?style=flat-square&color=007acc&label=version&logo=NPM" alt="version" /></a> <a href="https://github.com/Digoro/ngx-cron-ui/blob/master/projects/ngx-cron-ui/README.md" target="_blank"><img alt="Angular" src="https://img.shields.io/static/v1.svg?label=&message=Angular&style=flat-square&logo=Angular&color=dd0031"></a>
 
-## Code scaffolding
+<h3 align=center>
+cron 문법을 사용하여 스케줄을 입력할 수 있는 Angular 모듈
+</h3>
 
-Run `ng generate component component-name --project ngx-cron-ui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-cron-ui`.
-> Note: Don't forget to add `--project ngx-cron-ui` or else it will be added to the default project in your `angular.json` file. 
+-----
+<p align=center>
+<img  width="300" src="../../images/example01.png" />
+</p>
 
-## Build
 
-Run `ng build ngx-cron-ui` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Install
+### npm
+```bash
+$ npm install --save ngx-cron-ui
+```
 
-## Publishing
+## Get started
+```ts
+import { NgxCronUiModule } from 'ngx-cron-ui';
 
-After building your library with `ng build ngx-cron-ui`, go to the dist folder `cd dist/ngx-cron-ui` and run `npm publish`.
+@NgModule({
+  imports: [
+    NgxCronUiModule
+  ]
+})
+```
 
-## Running unit tests
-
-Run `ng test ngx-cron-ui` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

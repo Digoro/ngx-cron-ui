@@ -1,6 +1,23 @@
 {
   "name": "ngx-cron-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Digoro/ngx-cron-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/Digoro/cron-ui/issues"
+  },
+  "author": {
+    "name": "Digoro",
+    "email": "lsh000124@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "cron",
+    "ngx-cron",
+    "cron-ui"
+  ],
   "peerDependencies": {
     "@angular/common": "^9.1.12",
     "@angular/core": "^9.1.12"
