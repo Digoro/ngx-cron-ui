@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { NgxCronUiConfig, NgxCronUiFrequency, OptionType } from './model/model';
 import { CronService } from './services/cron.service';
 import { DataService } from './services/data.service';
@@ -17,28 +17,27 @@ export class NgxCronUiComponent implements OnInit {
   selectedFrequency = 0;
 
   constructor(
-    private fb: FormBuilder,
     private cronService: CronService,
     public dataService: DataService
   ) { }
 
   ngOnInit() {
-    this.formGroup = this.fb.group({
-      baseFrequency: 0,
-      minutes: '',
-      hours: '',
-      daysOfWeek: '',
-      daysOfMonth: '',
-      months: '',
-    });
+    this.formGroup = new FormGroup({
+      baseFrequency: new FormControl(''),
+      minutes: new FormControl(this.config.isSetDefaultValue ? [0] : ''),
+      hours: new FormControl(this.config.isSetDefaultValue ? [0] : ''),
+      daysOfWeek: new FormControl(this.config.isSetDefaultValue ? [0] : ''),
+      daysOfMonth: new FormControl(this.config.isSetDefaultValue ? [1] : ''),
+      months: new FormControl(this.config.isSetDefaultValue ? [1] : ''),
+    })
 
     this.formGroup.valueChanges.subscribe((value: NgxCronUiFrequency) => {
       if (this.selectedFrequency != +value.baseFrequency) {
-        this.formGroup.controls.minutes.setValue([], { emitEvent: false })
-        this.formGroup.controls.hours.setValue([], { emitEvent: false })
-        this.formGroup.controls.daysOfWeek.setValue([], { emitEvent: false })
-        this.formGroup.controls.daysOfMonth.setValue([], { emitEvent: false })
-        this.formGroup.controls.months.setValue([], { emitEvent: false })
+        this.formGroup.controls.minutes.setValue(this.config.isSetDefaultValue ? [0] : '', { emitEvent: false })
+        this.formGroup.controls.hours.setValue(this.config.isSetDefaultValue ? [0] : '', { emitEvent: false })
+        this.formGroup.controls.daysOfWeek.setValue(this.config.isSetDefaultValue ? [0] : '', { emitEvent: false })
+        this.formGroup.controls.daysOfMonth.setValue(this.config.isSetDefaultValue ? [1] : '', { emitEvent: false })
+        this.formGroup.controls.months.setValue(this.config.isSetDefaultValue ? [1] : '', { emitEvent: false })
       }
       this.selectedFrequency = +value.baseFrequency;
       const cronString = this.cronService.fromCron(this.formGroup.value);

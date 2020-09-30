@@ -1,5 +1,6 @@
 export interface NgxCronUiConfig {
     option?: {};
+    isSetDefaultValue?: boolean;
 }
 
 export interface NgxCronUiFrequency {

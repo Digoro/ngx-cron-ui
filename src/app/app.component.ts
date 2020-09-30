@@ -10,8 +10,10 @@ export class AppComponent {
   config: NgxCronUiConfig = {
     option: {
       minute: false,
+      hour: false,
       year: false
-    }
+    },
+    isSetDefaultValue: true
   }
 
   constructor() { }
