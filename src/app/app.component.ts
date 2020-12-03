@@ -13,7 +13,8 @@ export class AppComponent {
       hour: false,
       year: false
     },
-    isSetDefaultValue: true
+    isSetDefaultValue: true,
+    isBaseFrequencyNewLine: true
   }
 
   constructor() { }

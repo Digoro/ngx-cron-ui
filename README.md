@@ -33,12 +33,15 @@ import { NgxCronUiModule } from 'ngx-cron-ui';
 ```ts
 //app.component.ts
 
-config = {
-   option: {
-      minute: false, 
-      year: false 
-   } 
-};
+config: NgxCronUiConfig = {
+    option: {
+      minute: false,
+      hour: false,
+      year: false
+    },
+    isSetDefaultValue: true,
+    isBaseFrequencyNewLine: true
+  }
 ```
 3. add `ngx-cron-ui` component.
 ```html
