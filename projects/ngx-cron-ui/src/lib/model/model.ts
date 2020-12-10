@@ -2,6 +2,7 @@ export interface NgxCronUiConfig {
     option?: {};
     isSetDefaultValue?: boolean;
     isBaseFrequencyNewLine?: boolean;
+    useTime?: boolean;
 }
 
 export interface NgxCronUiFrequency {

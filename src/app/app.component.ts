@@ -14,14 +14,17 @@ export class AppComponent {
       year: false
     },
     isSetDefaultValue: true,
-    isBaseFrequencyNewLine: true
+    isBaseFrequencyNewLine: true,
   }
+
+  cron: string;
 
   constructor() { }
 
   ngOnInit() { }
 
   onChange(event) {
+    this.cron = event;
     console.log(`result: ${event}`);
   }
 }

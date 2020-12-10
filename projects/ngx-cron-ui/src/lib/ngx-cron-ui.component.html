@@ -23,15 +23,17 @@
       <option *ngFor="let item of dataService.daysOfWeek" [value]="item.value">{{item.label}}</option>
     </select>
     <label *ngIf="selectedFrequency === 4">요일</label>
-    <!-- hours -->
-    <select *ngIf="selectedFrequency >= 3" class="form-control" [formControlName]="'hours'" multiple>
-      <option *ngFor="let item of dataService.hours" [value]="item.value">{{item.label}}</option>
-    </select>
-    <label *ngIf="selectedFrequency >= 3">시</label>
-    <!-- minutes -->
-    <select *ngIf="selectedFrequency >= 2" class="form-control" [formControlName]="'minutes'" multiple>
-      <option *ngFor="let item of dataService.minutes" [value]="item.value">{{item.label}}</option>
-    </select>
-    <label *ngIf="selectedFrequency >= 2">분 마다</label>
+    <ng-container *ngIf="config.useTime !== false">
+      <!-- hours -->
+      <select *ngIf="selectedFrequency >= 3" class="form-control" [formControlName]="'hours'" multiple>
+        <option *ngFor="let item of dataService.hours" [value]="item.value">{{item.label}}</option>
+      </select>
+      <label *ngIf="selectedFrequency >= 3">시</label>
+      <!-- minutes -->
+      <select *ngIf="selectedFrequency >= 2" class="form-control" [formControlName]="'minutes'" multiple>
+        <option *ngFor="let item of dataService.minutes" [value]="item.value">{{item.label}}</option>
+      </select>
+      <label *ngIf="selectedFrequency >= 2">분 마다</label>
+    </ng-container>
   </div>
 </div>
