@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { NgxCronUiConfig, NgxCronUiFrequency, OptionType } from './model/model';
+import { NgxCronUiConfig, NgxCronUiFrequency, NgxCronUiSelectType, OptionType } from './model/model';
 import { CronService } from './services/cron.service';
 import { DataService } from './services/data.service';
 
@@ -11,6 +11,7 @@ import { DataService } from './services/data.service';
 })
 export class NgxCronUiComponent implements OnInit {
   @Input() config: NgxCronUiConfig;
+  @Input() minutes: NgxCronUiSelectType[] = this.dataService.minutes;
   @Output() onChangeEvent = new EventEmitter();
   formGroup: FormGroup;
 

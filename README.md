@@ -10,6 +10,10 @@ Angular module for cron schedule editor
 <img  width="300" src="https://raw.githubusercontent.com/Digoro/ngx-cron-ui/master/projects/ngx-cron-ui/images/example01.png" />
 </p>
 
+## Version
+* Angular <= 9, 0.5.0
+* Angular > 11, 0.6.0
+
 ## Install
 npm
 ```bash

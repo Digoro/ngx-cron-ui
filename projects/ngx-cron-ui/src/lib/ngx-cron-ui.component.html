@@ -31,7 +31,7 @@
       <label *ngIf="selectedFrequency >= 3">시</label>
       <!-- minutes -->
       <select *ngIf="selectedFrequency >= 2" class="form-control" [formControlName]="'minutes'" multiple>
-        <option *ngFor="let item of dataService.minutes" [value]="item.value">{{item.label}}</option>
+        <option *ngFor="let item of minutes" [value]="item.value">{{item.label}}</option>
       </select>
       <label *ngIf="selectedFrequency >= 2">분 마다</label>
     </ng-container>

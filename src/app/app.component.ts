@@ -18,6 +18,12 @@ export class AppComponent {
   }
 
   cron: string;
+  minutes = [
+    { value: 0, label: '00' },
+    { value: 15, label: '15' },
+    { value: 30, label: '30' },
+    { value: 45, label: '45' },
+  ];
 
   constructor() { }
 
